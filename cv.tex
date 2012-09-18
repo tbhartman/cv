@@ -40,6 +40,20 @@
 \newdateformat{tbhdate}{\twodigit{\THEDAY}\ \monthname[\THEMONTH] \THEYEAR}
 \tbhdate
 
+\usepackage[firstinits=true,
+            isbn=false,
+            citestyle=numeric-comp,
+            bibstyle=numeric,
+            sorting=none,
+            maxnames=10,
+            backend=biber]{biblatex}
+%Make Author Names boldface in bibliography
+%\renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
+%\renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
+%\renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
+%\renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
+\addbibresource{cv.bib}
+
 % Fonts
 \usepackage[T1]{fontenc}
 \usepackage[urw-garamond]{mathdesign}
@@ -201,28 +215,28 @@
 
 \subsection*{Journal Articles}
 \begin{itemize}
-\item Hartman T.B., Hyer M.W., Case S.W.; \textit{Stress Recovery in Composite Laminates.}; AIAA Journal; Accepted 13 August 2011.
+\item \fullcite{hartman2012geometrically}
 \end{itemize}
 
 \subsection*{Conference Proceedings}
 \begin{itemize}
-\item Hartman T.B., Hyer M.W., Case S.W.; \textit{Stress Recovery in Composite Laminates.}; 52$^{\texttt{nd}}$ AIAA/ASME/ASCE/ASC Structures, Structural Dynamics and Materials Conference, 2011.
-\item Hartman T.B., Allen D.W., Case S.W.; \textit{Failure of Spectra Shield UHMWPE Composite Due to Low Velocity Hard Body Impact.}; Proceedings of the 2010 SAMPE Fall Technical Conference.
+\item \fullcite{hartman2011stress}
+\item \fullcite{hartman2010failure}
 \end{itemize}
 
 \subsection*{Conference Presentations}
 \begin{itemize}
 \item \textit{Stress Recovery in Composite Laminates.}
   \begin{itemize}
-  \item 2011 AIAA 52$^{\texttt{nd}}$ Fall Technical Conference,
+  \item 2011 AIAA 52\textsuperscript{nd} Fall Technical Conference,
     Denver, CO,
-    April 05, 2011.
+    05 April 2011.
   \end{itemize}
-\item \textit{Failure of Spectra Shield UHMWPE Composite Due to Low Velocity Hard Body Impact.}
+\item \textit{Failure of Spectra Shield UHMWPE Composite Due to Low Velocity Hard Body Impact}
   \begin{itemize}
   \item 2010 SAMPE Fall Technical Conference,
     Salt Lake City, UT,
-    October 13, 2010.
+    13 October 2010.
   \end{itemize}
 \end{itemize}
 
@@ -240,7 +254,7 @@
 \section*{Honors, Awards, \& Fellowships}
 
 \begin{itemize}
-\item Jefferson Goblet Award for Outstanding Student Paper, AIAA 52$^{\texttt{nd}}$ SDM Conference, April, 2011
+\item Jefferson Goblet Award for Outstanding Student Paper, AIAA 52\textsuperscript{nd} SDM Conference, April, 2011
 \item NCCAA Sportsmanship Award, Tennis, 2006
 %\item NCCAA Scholar-Athlete, Tennis, 2005-2006
 \item NAIA Scholar-Athlete, Tennis, 2005-2006
@@ -250,18 +264,9 @@
 \section*{Conferences and Workshops Attended}
 
 \begin{itemize}
-\item AIAA 52$^{\texttt{nd}}$ SDM Conference, Denver, CO, April 04-06, 2011
+\item AIAA 52\textsuperscript{nd} SDM Conference, Denver, CO, April 04-06, 2011
 \item SAMPE Fall Conference, Salt Lake City, UT, October 12-14, 2010
 \item Graduate Teaching Assistantship Workshop, Virginia Tech, August 2008
 \end{itemize}
-
-\medskip
-
-% Footer
-\begin{center}
-  \begin{small}
-    Last updated: \today
-  \end{small}
-\end{center}
 
 \end{document}
