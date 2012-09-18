@@ -14,15 +14,32 @@
 
 \documentclass[10pt,letterpaper]{article}
 
+% Set your name here
+\newcommand\name{Timothy B. Hartman}
+
 \usepackage{hyperref}
 \usepackage{geometry}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\emph{\name --- cirriculum vit\ae}}
+\fancyhead[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{Updated: \today}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
 
 % Fonts
 \usepackage[T1]{fontenc}
 \usepackage[urw-garamond]{mathdesign}
-
-% Set your name here
-\newcommand\name{Timothy B. Hartman}
 
 % The following metadata will show up in the PDF properties
 \hypersetup{
@@ -42,9 +59,9 @@
 }
 
 % Customize page headers
-\pagestyle{myheadings}
-\markright{\name}
-\thispagestyle{empty}
+\pagestyle{fancy}
+%\markright{\name}
+\thispagestyle{plain}
 
 % Custom section fonts
 \usepackage{sectsty}
