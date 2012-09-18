@@ -37,6 +37,10 @@
   \renewcommand{\footrulewidth}{0pt}
 }
 
+\usepackage{datetime}
+\newdateformat{tbhdate}{\twodigit{\THEDAY}\ \monthname[\THEMONTH] \THEYEAR}
+\tbhdate
+
 % Fonts
 \usepackage[T1]{fontenc}
 \usepackage[urw-garamond]{mathdesign}
