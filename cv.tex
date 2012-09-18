@@ -17,7 +17,6 @@
 % Set your name here
 \newcommand\name{Timothy B. Hartman}
 
-\usepackage{hyperref}
 \usepackage{geometry}
 
 \usepackage{lastpage}
@@ -45,14 +44,20 @@
 \usepackage[T1]{fontenc}
 \usepackage[urw-garamond]{mathdesign}
 
+\usepackage[plainpages=false]{hyperref}
+
+
 % The following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
   urlcolor = black,
+  linkcolor = black,
+  citecolor = black,
+  filecolor = black,
   pdfauthor = {\name},
   pdfkeywords = {engineering mechanics},
-  pdftitle = {\name: Curriculum Vitae},
-  pdfsubject = {Curriculum Vitae},
+  pdftitle = {\name: Curriculum vitae},
+  pdfsubject = {curriculum vitae},
   pdfpagemode = UseNone
 }
 
@@ -112,10 +117,11 @@
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
 % Mobile: (540) 808-3697 \\
-  Office: (540) 552-2422 \\
+  Office: \href{tel:5405522422}{540.552.2422} \\
 % Fax: (540) 231-9187 \\
-  Email: tbhartman@vt.edu \\
-  Homepage: tbhartman.org
+\newcommand{\email}{tbhartman@vt.edu}
+  Email: \href{mailto:\email}{\email} \\
+  Homepage: \href{http://tbhartman.org}{tbhartman.org}
 \end{minipage}
 
 \vspace{12pt}
