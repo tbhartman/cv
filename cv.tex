@@ -17,14 +17,21 @@
 % Set your name here
 \newcommand\name{Timothy B. Hartman}
 
+\def\vpisu{Virginia Polytechnic Institute and State University}
+
 \usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+
+\usepackage{CJK}
+\usepackage{pinyin}
 
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \setlength{\headheight}{14.5pt}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{\emph{\name --- cirriculum vit\ae}}
+\fancyhead[L]{\emph{\name\ --- cirriculum vit\ae}}
 \fancyhead[R]{\thepage/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -47,11 +54,6 @@
             sorting=none,
             maxnames=10,
             backend=biber]{biblatex}
-%Make Author Names boldface in bibliography
-%\renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
-%\renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
-%\renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
-%\renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
 \addbibresource{cv.bib}
 
 % Fonts
@@ -60,8 +62,6 @@
 
 \usepackage[plainpages=false]{hyperref}
 
-
-% The following metadata will show up in the PDF properties
 \hypersetup{
   colorlinks = true,
   urlcolor = black,
@@ -83,29 +83,17 @@
 
 % Customize page headers
 \pagestyle{fancy}
-%\markright{\name}
 \thispagestyle{plain}
-
-% Custom section fonts
-\usepackage{sectsty}
-\sectionfont{\rmfamily\mdseries\Large}
-\subsectionfont{\rmfamily\mdseries\itshape\large}
-
-% Other possible font commands include:
-% \ttfamily for teletype,
-% \sffamily for sans serif,
-% \bfseries for bold,
-% \scshape for small caps,
-% \normalsize, \large, \Large, \LARGE sizes.
 
 % Don't indent paragraphs.
 \setlength\parindent{0em}
+\renewcommand{\baselinestretch}{1.0}
 
 % Make lists without bullets and compact spacing
 \renewenvironment{itemize}{
   \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-    \setlength{\itemsep}{0.25em}
+    \setlength{\leftmargin}{30pt}
+    \setlength{\itemsep}{0.2em}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0.25em}
   }
@@ -113,26 +101,34 @@
   \end{list}
 }
 
+\newcommand{\rowtabular}[4][3.7in]{%
+  \begin{tabularx}{\linewidth}{p{24pt} @{}p{#1} X r@{}}%
+    & #2 & #3 & #4 \\ [1.0pt]%
+  \end{tabularx}%
+}
+
+\renewcommand{\textsuperscript}[1]{%
+  \raisebox{2.5pt}{\scriptsize \hspace{0.3pt}#1}%
+}
+
 \begin{document}
 
 % Place name at left
 {\huge \name}
 
-% Alternatively, print name centered and bold:
-%\centerline{\huge \bf \name}
-
 \bigskip
 
 \begin{minipage}[t]{0.5\textwidth}
   Department of Engineering Science and Mechanics \\
-  Virginia Polytechnic Institute and State University \\
+  \vpisu \\
   223 Norris Hall (0219) \\
   Blacksburg, VA 24061
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
-% Mobile: (540) 808-3697 \\
+  \raggedleft
+% Mobile: \href{tel:5408083697}{540.808.3697} \\
   Office: \href{tel:5402313139}{540.231.3139} \\
-% Fax: (540) 231-9187 \\
+% Fax: 540.231.9187 \\
 \newcommand{\email}{tbhartman@vt.edu}
   Email: \href{mailto:\email}{\email} \\
   Homepage: \href{http://tbhartman.org}{tbhartman.org}
@@ -142,63 +138,111 @@
 
 \rule{\textwidth}{1pt}
 
-%
-% Education
-%
+%\titlespacing{command}{left}{before}{after}{right}
+%\titleformat{command}[shape]{format}{label}{sep}{before}[after]
+\titlespacing{\section}{0pt}{\baselineskip}{\baselineskip}{}
+\titleformat{\section}[hang]{\Large}{}{1em}{}[]
 
 \section*{Education}
 
+\titlespacing{\subsection}{10pt}{\baselineskip}{0.5\baselineskip}{}
+\titleformat{\subsection}[runin]{\bf}{}{0pt}{}[,]
+
+\subsection*{Ph.D. Engineering Mechanics}
+%\vpisu, \textit{Cum Laude}, May 2013.
+\vpisu, May 2013.
+
 \begin{itemize}
-    \item Ph.D. Engineering Mechanics, Virginia Polytechnic Institute and State University, 2013 \textit{(projected)}.
-    % Received TBD
-    \begin{itemize}
-        % \item \textit{Dissertation:}
-        %  thesis title goes here
-        \item \textit{Committee:}
-        Scott W. Case (co-chair), Romesh C. Batra (co-chair), Michael W. Hyer, Robert L. West, and Shane D. Ross.
-    \end{itemize}
-    \item B.S. Mechanical Engineering, \textit{Cum Laude}, Cedarville University, 2006.
-    % Received May ??, 2006
-    \begin{itemize}
-        \item Passed Fundamentals of Engineering Exam, April 2006.
-    \end{itemize}
+\item \textit{Dissertation:} Geometrically Nonlinear Stress Recovery in Composite Laminates
+\item Engineering Education Graduate Certificate 
+\item Future Professoriate Graduate Certificate
+\item
+  \begin{tabbing}
+    \textit{Committee:} \= Scott W. Case (co-chair) \\
+    \> Michael W. Hyer (co-chair) \\
+    \> Romesh C. Batra \\
+    \> Shane D. Ross \\
+    \> Robert L. West
+  \end{tabbing}
 \end{itemize}
 
-%
-% Employment
-%
+\subsection*{B.S. Mechanical Engineering}
+Cedarville University, \textit{Cum Laude}, May 2006.
+\begin{itemize}
+\item Passed Fundamentals of Engineering Exam, April 2006.
+\end{itemize}
 
-\section*{Employment}
+\section*{Teaching}
 
-\subsection*{Virginia Tech, Engineering Science and Mechanics}
+\titleformat{\subsection}[runin]{\large \it}{}{0pt}{}[\hfill\ ]
+
+\subsection*{\vpisu}
+Blackburg, VA
 
 \begin{itemize}
-\item Research Assistant, Scott W. Case, Spring 2009 - present
-\item Teaching Assistant, Mechanics of Materials Laboratory, Norman E. Dowling, Fall 2008
-    \begin{itemize}
-    \item Organized weekly two hour laboratory session including introductory lecture and experiments.  Graded weekly laboratory reports and held office hours.
-    \end{itemize}
+\item Mechanics of Deformable Bodies, Spring 2012
+\item Mechanical Behavior of Materials Laboratory, Fall 2008
+  % Instructed weekly two hour laboratory session. Responsible for introductory
+  % lecture, guiding experiments, assessing weekly laboratory reports, and
+  % assisting students out of class.
 \end{itemize}
 
 \subsection*{The High School Affiliated with the People's University of China}
-%人大附中
+Beijing, China
+
+%\begin{CJK}{Bg5}{fs}
+%%人大附中
+%\Ren2\da4 \fu4\zhong1
+%\end{CJK}
 \begin{itemize}
-\item Teacher, English Physics, August 2007 - June 2008
-    \begin{itemize}
-    \item Worked with team of sixteen college graduates teaching Chinese students English at a top high school in Beijing, China.  Responsibilities included developing curriculum, creating daily lesson plans, write and grade homework and tests, and building relationships with students out of class.  Taught courses in English physics and English grammar for more than two hundred students each semester.
-    \end{itemize}
+\item English Physics and Grammar, Fall 2007 -- Spring 2008
+  % Worked with team of sixteen college graduates teaching Chinese students
+  % English at a top high school in Beijing, China.  Responsible for cirriculum
+  % development, lesson plan creation, and student assessment in English physics
+  % and English grammar courses in addition to informal relationship building
+  % out of class.
+\end{itemize}
+
+\section*{Honors and Awards}
+
+\rowtabular[5in]{Jefferson Goblet Award for Best Student Paper, AIAA 52\textsuperscript{nd} SDM Conference, April, 2011}{}{}
+\rowtabular[5in]{NCCAA Sportsmanship Award in Men's Tennis, 2006}{}{}
+%\rowtabular[5in]{NCCAA Scholar-Athlete, Tennis}{}{2005--2006}
+\rowtabular[5in]{NAIA Scholar-Athlete in Men's Tennis, 2005,2006}{}{}
+%\rowtabular[5in]{NCCAA All-American, Tennis}{}{2003--2006}
+
+\section*{Employment}
+
+\titleformat{\subsection}[runin]{\large \it}{}{0pt}{}[\hfill\ ]
+
+\subsection*{\vpisu}
+Blacksburg, VA
+
+\begin{itemize}
+\item Research Assistant, Scott W. Case, January 2009 -- present
+  \begin{itemize}
+  \item Simulated quasi-static punch experiment of graphite fiber reinforced
+    composite laminate using progressive failure finite element analysis.
+    Designed experimental setup for characterizing the behavior of plates under
+    intermediate-velocity rigid-body impact.  Tested impact performance of thin
+    flexible fibrous composite and polycarbonate panels.
+  \end{itemize}
 \end{itemize}
 
 \subsection*{GSE Systems}
+Windsor Mill, MD
 
 \begin{itemize}
-\item Systems Engineer, September 2006 - July 2007
+\item Systems Engineer, September 2006 -- July 2007
     \begin{itemize}
-    \item Modeled combined cycle gas turbine power plant mechanical systems for use in a computer simulated control room environment.
+    \item Modeled combined cycle gas turbine power plant mechanical systems
+      through numerical simulation tools for use in educational training
+      environments.
     \end{itemize}
 \end{itemize}
 
-\subsection*{ITT Industries Aerospace/Communications Division}
+\subsection*{ITT Industries}
+Aerospace/Communications Division \hfill Fort Wayne, IN
 
 \begin{itemize}
 \item Manufacturing Engineering Intern, Summer 2005
@@ -207,22 +251,21 @@
     \end{itemize}
 \end{itemize}
 
-%
-% Research
-%
-
 \section*{Research}
+
+\titleformat{\subsection}[hang]{\large \it}{}{0pt}{}[]
+
 
 \newenvironment{biblist}{%
   \begin{list}{}{%
-    \setlength{\leftmargin}{30pt}
+    \setlength{\leftmargin}{50pt}
     \setlength{\itemsep}{0.2em}
     \setlength{\parskip}{0pt}
     \setlength{\parsep}{0.25em}
     %\setlength{\labelwidth}{0pt}%
     %\setlength{\labelsep}{1em}%
     %\setlength{\leftmargin}{2em}%
-    \setlength{\itemindent}{-15pt}%
+    \setlength{\itemindent}{-20pt}%
   }
 }{\end{list}}
 
@@ -248,7 +291,7 @@
   \item 2012 ASC 27\textsuperscript{nd} Technical Conference, Arlington, TX,
     02 October 2012.
   \end{itemize}
-\item \textit{Stress Recovery in Composite Laminates.}
+\item \textit{Stress Recovery in Composite Laminates}
   \begin{itemize}
   \item 2011 AIAA 52\textsuperscript{nd} Fall Technical Conference,
     Denver, CO,
@@ -263,33 +306,51 @@
   \end{itemize}
 \end{itemize}
 
-%
-% Memberships, Awards, Etc.
-%
 
-\section*{Professional Activities}
+\section*{Activities}
+\subsection*{Advising}
 \begin{itemize}
-\item Member, American Institute of Aeronautics and Astronautics, 2011-Present
-\item Student Panelist, Virginia Tech Graduate Honor System, 2011-Present
-\item Member, Society of Automotive Engineers, 2005-2006
+\item Undergraduate research students: David Allen (2012), Matt Yaple (2014)
 \end{itemize}
 
-\section*{Honors, Awards, \& Fellowships}
+\subsection*{Outreach}
+\rowtabular{Virginia Tech Graduate Honor System}{Panelist}{2011--present}
 
-\begin{itemize}
-\item Jefferson Goblet Award for Outstanding Student Paper, AIAA 52\textsuperscript{nd} SDM Conference, April, 2011
-\item NCCAA Sportsmanship Award, Tennis, 2006
-%\item NCCAA Scholar-Athlete, Tennis, 2005-2006
-\item NAIA Scholar-Athlete, Tennis, 2005-2006
-%\item NCCAA All-American, Tennis, 2003-2006
-\end{itemize}
+% \subsection*{Conferences Attended}
 
-\section*{Conferences and Workshops Attended}
+% \rowtabular{American Society for Composites 27\textsuperscript{th} Technical Conference}{Arlington, VA}{October 2012}
+% \rowtabular{4\textsuperscript{th} Conference on Higher Education Pedagogy}{Blacksburg, VA}{February 2012}
+% \rowtabular{AIAA 52\textsuperscript{nd} SDM Conference}{Denver, CO}{April 2011}
+% \rowtabular{SAMPE 2010 Fall Technical Conference}{Salt Lake City, UT}{October 2010} 
 
-\begin{itemize}
-\item AIAA 52\textsuperscript{nd} SDM Conference, Denver, CO, April 04-06, 2011
-\item SAMPE Fall Conference, Salt Lake City, UT, October 12-14, 2010
-\item Graduate Teaching Assistantship Workshop, Virginia Tech, August 2008
-\end{itemize}
+% \subsection*{Workshops Attended}
+
+% \rowtabular{Scientific Programming with Python}{Virginia Tech}{September 2012}
+% \rowtabular{High Performance Computing and Visualization Workshop}{Virginia Tech}{August 2012}
+% \rowtabular{Graduate Teaching Assistant Workshop}{Virginia Tech}{August 2008}
+
+% \subsection*{Professional Affiliations}
+% \rowtabular{American Institute of Aeronautics and Astronautics}{Student Member}{2011--2012}
+% \rowtabular{Society of Automotive Engineers}{Student Member}{2005-2006}
+
+% \subsection*{Software Knowledge}
+% \rowtabular{ABAQUS}{3}{}
+% \rowtabular{Ansys}{1}{}
+% \rowtabular{Autodesk Inventor}{3}{}
+% \rowtabular{C++}{1}{}
+% \rowtabular{FORTRAN}{2}{}
+% \rowtabular{HTML}{3}{}
+% \rowtabular{High Performance Computing}{1}{}
+% \rowtabular{\LaTeX}{3}{}
+% \rowtabular{LS-DYNA}{3}{}
+% \rowtabular{MATLAB}{3}{}
+% \rowtabular{Mathematica}{3}{}
+% \rowtabular{Microsoft Office}{4}{}
+% \rowtabular{PHP}{2}{}
+% \rowtabular{ParaView}{1}{}
+% \rowtabular{Python}{3}{}
+% \rowtabular{SolidWorks}{3}{}
+% \rowtabular{Unix}{3}{}
+
 
 \end{document}
