@@ -1,3 +1,15 @@
 CV_Versions/*
 _tex/*
 Resume/*
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+nohup.out
+auto/
