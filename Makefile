@@ -14,8 +14,8 @@ clean_tex= \
 	rm -f `ls $(1)* | grep -ve "$(1)\.\(pdf\|bst\|bib\|tex\|synctex.gz\)$$"`
 
 clean:
+	-rm -r auto
 	$(call clean_tex,cv)
-	$(call clean_tex,teaching_philosophy)
 
 cv.html: cv.tex
 	pandoc -f latex -t html cv.tex > cv.html
