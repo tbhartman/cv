@@ -213,18 +213,32 @@
 
 \section*{Research}
 
+\newenvironment{biblist}{%
+  \begin{list}{}{%
+    \setlength{\leftmargin}{30pt}
+    \setlength{\itemsep}{0.2em}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0.25em}
+    %\setlength{\labelwidth}{0pt}%
+    %\setlength{\labelsep}{1em}%
+    %\setlength{\leftmargin}{2em}%
+    \setlength{\itemindent}{-15pt}%
+  }
+}{\end{list}}
+
 \subsection*{Journal Articles}
-\begin{itemize}
+
+\begin{biblist}
 \item \fullcite{hartman2012geometrically}
-\end{itemize}
+\end{biblist}
 
 \subsection*{Conference Proceedings}
-\begin{itemize}
-\item \fullcite{tehrani2012impact}                                             
+\begin{biblist}
+\item \fullcite{tehrani2012impact}
 \item \fullcite{hartman2012geometrically2}
 \item \fullcite{hartman2011stress}
 \item \fullcite{hartman2010failure}
-\end{itemize}
+\end{biblist}
 
 \subsection*{Conference Presentations}
 \begin{itemize}
