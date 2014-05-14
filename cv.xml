@@ -1,0 +1,270 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="cv.xsl"?>
+<vitae>
+    <boilerplate>
+        Timothy B. Hartman - Curriculum Vitae
+        
+        Copyright (C) 2010 Timothy B. Hartman
+        
+        LaTeX template Copyright (C) 2004-2010 Jason R. Blevins
+        
+        from http://jblevins.org/cv.tex
+        
+        You may use use this document as a template to create your own CV
+        and you may redistribute the source code freely.  No attribution is
+        required in any resulting documents.  I do ask that you please leave
+        this notice and the above URL in the source code if you choose to
+        redistribute this file.
+    </boilerplate>
+    <profile>
+        <fullname>Timothy B. Hartman</fullname>
+        <contact type="work">
+            <company>Virginia Polytechnic Institute and State University</company>
+            <department>Department of Engineering Science and Mechanics</department>
+            <address>
+                <number>223</number>
+                <street>Norris Hall (0219)</street>
+                <city>Blacksburg</city>
+                <state>VA</state>
+                <code>24061</code>
+            </address>
+            <phone type="mobile">260.627.9846</phone>
+            <email>tbhartman@vt.edu</email>
+        </contact>
+    </profile>
+    <education>
+        <school>
+            <name>Virginia Polytechnic Institute and State University</name>
+            <degree>Ph.D. Engineering Mechanics</degree>
+            <start>2008</start>
+            <finish tbd="1">May 2013</finish>
+            <thesis type="Dissertation">
+                Geometrically Nonlinear Stress Recovery in Composite Laminates
+            </thesis>
+            <note>Engineering Education Graduate Certificate</note>
+            <note>Future Professoriate Graduate Certificate</note>
+            <committee>
+                <member>Scott W. Case (co-chair)</member>
+                <member>Michael W. Hyer (co-chair)</member>
+                <member>Romesh C. Batra</member>
+                <member>Shane D. Ross</member>
+                <member>Robert L. West</member>
+            </committee>
+        </school>
+        <school>
+            <name>Cedarville University</name>
+            <degree>B.S. Mechanical Engineering</degree>
+            <start>2002</start>
+            <finish>May 2006</finish>
+            <note>Passed Fundamentals of Engineering Exam, April 2006.</note>
+            <gpa>3.64/4.0</gpa>
+        </school>
+    </education>
+    <employment type="Teaching">
+        <job>
+            <company>Virginia Polytechnic Institute and State University</company>
+            <location>Blacksburg, VA</location>
+            <position>
+                <title>Mechanics of Deformable Bodies, Spring 2012</title>
+            </position>
+            <position>
+                <title>Mechanical Behavior of Materials Laboratory, Fall 2008</title>
+            </position>
+        </job>
+        <job>
+            <company>The High School Affiliated with the People's University of China</company>
+            <location>Beijing, China</location>
+            <position>
+                <title>English Physics and Grammar, Fall 2007--Spring2008</title>
+            </position>
+        </job>
+    </employment>
+    <employment>
+        <job>
+            <company>Virginia Polytechnic Institute and State University</company>
+            <location>Blacksburg, VA</location>
+            <position>
+                <title>Research Assistant, Scott W. Case, January 2010 -- present</title>
+                <description>
+                    Funded by Pratt &amp; Whitney, East Hartford, CT. Simulated quasi-static punch experiment of graphite fiber reinforced composite laminate using progressive failure finite element analysis.
+                </description>
+            </position>
+            <position>
+                <title>Research Assistant, Scott W. Case, January 2009 -- December 2009</title>
+                <description>
+                    Funded by Army Research Laboratories. Designed single-stage gas gun and performed experimental tests to characterize the behavior of flexible fibrous composite plates under intermediate-velocity rigid-body impact.
+                </description>
+            </position>
+        </job>
+        <job>
+            <company>GSE Systems</company>
+            <location>Windsor Mill, MD</location>
+            <position>
+                <title>Systems Enginer, September2006 -- July 2007</title>
+                <description>
+                    Modeled combined cycle gas turbine power plant mechanical systems through numerical simulation tools for use in educational training environments.
+                </description>
+            </position>
+        </job>
+        <job>
+            <company>ITT Industries</company>
+            <department>Aerospace/Communications Division</department>
+            <location>Fort Wayne, IN</location>
+            <position>
+                <title>Manufacturing Engineering Intern, Summer 2005</title>
+                <description>
+                    Evaluated use of automated optical inspection equipment for in-line inspection of circuit card assembly production.
+                </description>
+            </position>
+        </job>
+    </employment>
+    <awards>
+        <item>Jefferson Goblet Award for Best Student Paper, AIAA 52nd SDM Conference, April, 2011</item>
+        <item>NCCAA Sportsmanship Award in Men's Tennis, 2006</item>
+        <item>NAIA Scholar-Athlete in Men's Tennis, 2005, 2006</item>
+    </awards>
+    <research>
+        <article>
+            <author self="1">T. Hartman</author>
+            <author>M. Hyer</author>
+            <author>S. Case</author>
+            <title>Geometrically Nonlinear Stress Recovery in Composite Laminates</title>
+            <journal>AIAA Journal</journal>
+            <volume>50</volume>
+            <issue>5</issue>
+            <date>May 2012</date>
+            <pages>1156--1168</pages>
+        </article>
+        <proceedings>
+            <author>M. Tehrani</author>
+            <author>A. Boroujeni</author>
+            <author self="1">T. Hartman</author>
+            <author>T. Haugh</author>
+            <author>S. Case</author>
+            <author>M. Al-Haik</author>
+            <title>Impact and Qasi-Static Mechanical Properties of a Carbon Fiber Reinforced Carbon Nanotube/Epoxy</title>
+            <journal>Proceedings of the ASME 2012 International Mechanical Engineering Congress and Exposition</journal>
+            <location>Houston, TX</location>
+            <date>2012</date>
+        </proceedings>
+        <proceedings>
+            <author self="1">T. Hartman</author>
+            <author>M. Hyer</author>
+            <author>S. Case</author>
+            <title>Geometrically Nonlinear Stress Recovery in Composite Laminates Considering Inertial Effects</title>
+            <journal>American Socienty for Composites 27th Technical Conference</journal>
+            <location>Arlington, TX</location>
+            <date>2012</date>
+        </proceedings>
+        <proceedings>
+            <author self="1">T. Hartman</author>
+            <author>M. Hyer</author>
+            <author>S. Case</author>
+            <title>Geometrically Nonlinear Stress Recovery in Composite Laminates</title>
+            <journal>52nd AIAA Structures, Structural Dynamics, and Materials Converence</journal>
+            <location>Denver, CO</location>
+            <date>2011</date>
+        </proceedings>
+        <proceedings>
+            <author self="1">T. Hartman</author>
+            <author>S. Case</author>
+            <title>Failure of Spectra Shield UHMWPE Composites Due to Low Velocity Hard Body Impact</title>
+            <journal>Proceedings of the 2010 SAMPE Fall Technical Converence</journal>
+            <location>Salt Lake City, UT</location>
+            <date>2010</date>
+        </proceedings>
+        <presentation>
+            <title>Geometrically Nonlinear Stress Recovery in Composite Laminates Including Inertial Effects</title>
+            <event>27nd ASC Technical Converence</event>
+            <location>Arlington, TX</location>
+            <date>02 October 2012</date>
+        </presentation>
+        <presentation>
+            <title>Geometrically Nonlinear Stress Recovery in Composite Laminates</title>
+            <event>52nd AIAA Structures, Structural Dynamics, and Materials Converence</event>
+            <location>Denver, CO</location>
+            <date>05 April 2011</date>
+        </presentation>
+        <presentation>
+            <title>Failure of Spectra Shield UHMWPE Composites Due to Low Velocity Hard Body Impact</title>
+            <event>SAMPE Fall Technical Conference</event>
+            <location>Salt Lake City, UT</location>
+            <date>13 October 2010</date>
+        </presentation>
+    </research>
+    <activity type="Advising">
+        <item>
+            <task>Undergraduate research with Matt Yaple</task>
+            <location>Virginia Tech</location>
+            <date>2013</date>
+        </item>
+        <item>
+            <task>Undergraduate research with David Allen</task>
+            <location>Virginia Tech</location>
+            <date>2012</date>
+        </item>
+    </activity>
+    <activity type="Outreach">
+        <item>
+            <task>Virginia Tech Graduate Honor System</task>
+            <title>Panelist</title>
+            <date>2011--present</date>
+        </item>
+    </activity>
+    <activity type="Conference Attendance">
+        <item>
+            <task>American Society for Composites 27th Technical Conference</task>
+            <location>Arlington, TX</location>
+            <date>October 2012</date>
+        </item>
+        <item>
+            <task>4th Conference on Higher Education Pedagogy</task>
+            <location>Blacksburg, VA</location>
+            <date>February 2012</date>
+        </item>
+        <item>
+            <task>AIAA 52nd SDM Conference</task>
+            <location>Denver, CO</location>
+            <date>April 2011</date>
+        </item>
+        <item>
+            <task>SAMPE Fall Technical Conference</task>
+            <location>Salt Lake City, UT</location>
+            <date>October 2010</date>
+        </item>
+    </activity>
+    <activity type="Workshop Attendance">
+        <item>
+            <task>Scientific Programming with Python</task>
+            <location>Virginia Tech</location>
+            <date>September 2012</date>
+        </item>
+        <item>
+            <task>High Performance Computing and Visualization Workshop</task>
+            <location>Virginia Tech</location>
+            <date>August 2012</date>
+        </item>
+        <item>
+            <task>Introduction to LS-DYNA</task>
+            <location>LSTC</location>
+            <date>June 2011</date>
+        </item>
+        <item>
+            <task>Graduate Teaching Assistant Workshop</task>
+            <location>Virginia Tech</location>
+            <date>August 2008</date>
+        </item>
+    </activity>
+    <activity type="Professional Affiliations">
+        <item>
+            <task>American Institute of Aeronautics and Astronautics</task>
+            <location>Student Member</location>
+            <date>2011--2012</date>
+        </item>
+        <item>
+            <task>Society of Automotive Engineers</task>
+            <location>Student Member</location>
+            <date>2005--2006</date>
+        </item>
+    </activity>
+</vitae>

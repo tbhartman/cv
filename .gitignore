@@ -14,4 +14,4 @@ cv-blx.bib
 *.synctex.gz
 nohup.out
 auto/
-cv.html
+cv.texml
