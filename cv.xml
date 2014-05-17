@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="cv.xsl"?>
 <vitae>
     <boilerplate>
@@ -17,6 +17,7 @@
         redistribute this file.
     </boilerplate>
     <profile>
+        <shortname>T.B. Hartman</shortname>
         <fullname>Timothy B. Hartman</fullname>
         <contact type="work">
             <company>Virginia Polytechnic Institute and State University</company>
@@ -79,7 +80,7 @@
             </position>
         </job>
     </employment>
-    <employment>
+    <employment type="Employment">
         <job>
             <company>Virginia Polytechnic Institute and State University</company>
             <location>Blacksburg, VA</location>
@@ -142,7 +143,7 @@
             <author>T. Haugh</author>
             <author>S. Case</author>
             <author>M. Al-Haik</author>
-            <title>Impact and Qasi-Static Mechanical Properties of a Carbon Fiber Reinforced Carbon Nanotube/Epoxy</title>
+            <title>Impact and Quasi-Static Mechanical Properties of a Carbon Fiber Reinforced Carbon Nanotube/Epoxy</title>
             <journal>Proceedings of the ASME 2012 International Mechanical Engineering Congress and Exposition</journal>
             <location>Houston, TX</location>
             <date>2012</date>

@@ -6,8 +6,8 @@ all: pdf html
 .SECONDARY:  cv.texml
 .PHONY: pdf html 
 
-pdf: | cv.pdf teaching_philosophy.pdf
-html:: cv.html
+pdf: cv.pdf
+html: cv.html
 
 %.pdf: %.tex
 	latexmk -pdf $*
@@ -21,7 +21,10 @@ clean_tex= \
 	sed -i "s/\r//g" $@
 
 
-%.texml: %.xsl %.xml
+%.texml: %.tex.xsl %.xml
+	xsltproc $^ > $@
+
+%.html: %.xsl %.xml
 	xsltproc $^ > $@
 
 clean:

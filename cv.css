@@ -1,0 +1,63 @@
+div#profile {
+    position: relative;
+    border-bottom: 2px solid black;
+    padding: 0em 1em 1em 1em;
+}
+div#contact{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: right;
+}
+div#cv{
+    margin: 0 20% 0 20%
+}
+
+.school .degree {
+    font-weight: bold;
+}
+
+.finish .tbd {
+    font-style: italic;
+}
+
+li {
+    list-style: none;
+}
+
+div.item {
+    position: relative;
+}
+
+.item div.date{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.item div.location{
+    position:absolute;
+    top: 0px;
+    right: 20%;
+}
+
+.item div{
+    display:inline;
+}
+table{
+    border-collapse:collapse;
+}
+div.activity>table{
+    width: 100%;
+}
+.activity td{
+    border: 1px solid black;
+}
+
+.activity td.task{
+    width: 70%;
+}
+
+span.self{
+    font-weight: bold;
+}
