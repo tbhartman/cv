@@ -2,7 +2,6 @@
 
 all: pdf html
 
-.INTERMEDIATE:  cv.texml
 .SECONDARY:  cv.texml
 .PHONY: pdf html 
 
@@ -12,12 +11,9 @@ html: cv.html
 %.pdf: %.tex
 	latexmk -pdf $*
 
-clean_tex= \
-	rm -f `ls $(1)* | grep -ve "$(1)\.\(pdf\|bst\|bib\|tex\|synctex.gz\)$$"`
-
 %.tex: %.texml
 	rm -f $@
-	texml.py -e UTF-8 $^ $@
+	texml -e UTF-8 $^ $@
 	sed -i "s/\r//g" $@
 
 
@@ -28,6 +24,5 @@ clean_tex= \
 	xsltproc $^ > $@
 
 clean:
-	-rm -r auto
-	$(call clean_tex,cv)
+	latexmk -c cv
 

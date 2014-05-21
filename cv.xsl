@@ -92,8 +92,8 @@
 <xsl:template match="job">
   <div class="job">
     <h3><xsl:value-of select="company"/></h3>
-    <xsl:value-of select="department"/>
-    <xsl:value-of select="location"/>
+    <span class="department"><xsl:value-of select="department"/></span>
+    <span class="location"><xsl:value-of select="location"/></span>
     <xsl:apply-templates select="position"/>
   </div>
 </xsl:template>
@@ -108,26 +108,31 @@
 <xsl:template match="awards">
   <div id="awards">
     <h2>Awards and Honors</h2>
+    <ul>
+      <xsl:for-each select="item">
+        <li><xsl:value-of select="."/></li>
+      </xsl:for-each>
+    </ul>
   </div>
 </xsl:template>
 <xsl:template match="research">
   <div id="research">
     <h2>Research</h2>
     <xsl:if test="article">
-      <h3>Journal Articles</h3>
       <div>
+      <h3>Journal Articles</h3>
         <xsl:apply-templates select="article"/>
       </div>
     </xsl:if>
     <xsl:if test="proceedings">
-      <h3>Conference Proceedings</h3>
       <div>
+      <h3>Conference Proceedings</h3>
         <xsl:apply-templates select="proceedings"/>
       </div>
     </xsl:if>
     <xsl:if test="presentation">
-      <h3>Presentations</h3>
       <div>
+      <h3>Presentations</h3>
         <xsl:apply-templates select="presentation"/>
       </div>
     </xsl:if>
@@ -173,10 +178,10 @@
 </xsl:template>
 <xsl:template match="presentation">
   <div class="presentation">
-    <em><xsl:value-of select="title"/></em>
-    <span class="event"><xsl:value-of select="event"/></span>
-    <span class="location"><xsl:value-of select="location"/></span>
-    <span class="date"><xsl:value-of select="date"/></span>
+    <span class="title"><xsl:value-of select="title"/></span><br />
+    <span class="event"><xsl:value-of select="event"/></span>,
+    <span class="location"><xsl:value-of select="location"/></span>,
+    <span class="date"><xsl:value-of select="date"/></span>.
   </div>
 </xsl:template>
 <xsl:template match="activity[position()=1]">
@@ -203,33 +208,37 @@
 </xsl:template>
 
 <xsl:template match="//education/school">
-      <div class="school">
-        <span class="degree"><xsl:value-of select="degree"/></span>,
-        <xsl:value-of select="name"/>,
-        <xsl:if test="finish[@tbd='1']">
-          <span class="finish">
-            <span class="tbd">anticipated <xsl:value-of select="finish"/></span>
-          </span>
-        </xsl:if>
-        <xsl:if test="not(finish[@tbd='1'])">
-          <span class="finish"><xsl:value-of select="finish"/></span>
-        </xsl:if>
-        <xsl:if test="note | thesis | committee">
-          <div>
-            <ul>
-              <xsl:apply-templates/>
-              <xsl:for-each select="committee">
-              </xsl:for-each>
-            </ul>
-          </div>
-        </xsl:if>
+  <div class="school">
+    <span class="degree"><xsl:value-of select="degree"/></span>,
+    <xsl:value-of select="name"/>,
+    <xsl:if test="finish[@tbd='1']">
+      <span class="finish">
+        <span class="tbd">anticipated <xsl:value-of select="finish"/></span>
+      </span>
+    </xsl:if>
+    <xsl:if test="not(finish[@tbd='1'])">
+      <span class="finish"><xsl:value-of select="finish"/></span>
+    </xsl:if>
+
+    <xsl:if test="gpa">
+      <em id="gpa">(GPA: <xsl:value-of select="gpa"/>)</em>
+    </xsl:if>
+    <xsl:if test="note | thesis | committee">
+      <div>
+        <ul>
+          <xsl:apply-templates select="note|thesis|committee"/>
+          <xsl:for-each select="committee">
+          </xsl:for-each>
+        </ul>
       </div>
+    </xsl:if>
+  </div>
 </xsl:template>
 
 <xsl:template match="note | thesis">
   <li>
   <xsl:if test="@type">
-    <em><xsl:value-of select="@type"/></em>
+    <em><xsl:value-of select="@type"/>:</em>
   </xsl:if>
     <xsl:value-of select="."/>
   </li>

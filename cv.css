@@ -1,6 +1,5 @@
 div#profile {
     position: relative;
-    border-bottom: 2px solid black;
     padding: 0em 1em 1em 1em;
 }
 div#contact{
@@ -10,15 +9,27 @@ div#contact{
     text-align: right;
 }
 div#cv{
-    margin: 0 20% 0 20%
+    margin: 0 auto 0 auto;
+    min-width: 400px;
+    max-width: 900px;
 }
-
+div#cv > div:not(#profile)
+{
+    border-top: 2px solid #999;
+}
+div#cv > div#education{
+    border-top: 2px solid black;
+}
 .school .degree {
     font-weight: bold;
 }
 
 .finish .tbd {
     font-style: italic;
+}
+div#Teaching h4{
+    margin: 10px;
+    font-weight: normal
 }
 
 li {
@@ -48,16 +59,70 @@ table{
     border-collapse:collapse;
 }
 div.activity>table{
-    width: 100%;
+    position: relative;
+    left: 20px;
+    width: 95%;
 }
-.activity td{
-    border: 1px solid black;
-}
-
 .activity td.task{
-    width: 70%;
+    width: 60%;
+}
+.activity td.date{
+    width: 20%;
+    text-align:right;
+}
+.activity td.location{
+    text-align:center;
 }
 
 span.self{
     font-weight: bold;
+}
+
+div.publication,div.presentation{
+    text-indent: -2em;
+    padding-left: 2em;
+    margin: 15px 10px;
+}
+div#cv>div>div{
+    margin: 20px 10px;
+}
+
+#gpa{
+    padding-left: 5px;
+}
+h3{
+    display:inline;
+}
+div.employment > div.job{
+    margin: 10px 0px;
+}
+div.job{
+    position: relative;
+}
+div.job>span.location{
+    position: absolute;
+    right: 0px;
+}
+div.job > span.department{
+    position: absolute;
+    text-align: center;
+    right: 0px;
+    left: 0px;
+}
+div.job > div.job{
+    margin-left: 10px;
+}
+div.job > .description{
+    margin: 2px 20px;
+}
+
+div.presentation .title{
+    font-style: italic
+}
+div.presentation span.title{
+
+}
+div.presentation span.event
+{
+    margin-left: 10px;
 }

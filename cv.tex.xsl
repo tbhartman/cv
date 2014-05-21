@@ -8,7 +8,7 @@
   <xsl:output method="xml" indent="yes"/>
 
   <xsl:template match="vitae">
-    <TeXML emptylines="1">
+    <TeXML emptylines="1" ligatures="1">
       <TeXML escape="0" ligatures="1">
         <xsl:text>
 % This LaTeX document is automatically generated from XML via XSLT
