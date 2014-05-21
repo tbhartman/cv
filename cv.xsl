@@ -92,10 +92,14 @@
 <xsl:template match="job">
   <div class="job">
     <h3><xsl:value-of select="company"/></h3>
-    <span class="department"><xsl:value-of select="department"/></span>
-    <span class="location"><xsl:value-of select="location"/></span>
-    <xsl:apply-templates select="position"/>
+    <xsl:apply-templates select="department|location|position"/>
   </div>
+</xsl:template>
+<xsl:template match="job/department">
+    <span class="department"><xsl:value-of select="."/></span>
+</xsl:template>
+<xsl:template match="job/location">
+    <span class="location"><xsl:value-of select="."/></span>
 </xsl:template>
 <xsl:template match="job/position">
   <div class="job">
