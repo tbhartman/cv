@@ -6,7 +6,7 @@ all: pdf html
 .PHONY: pdf html 
 
 pdf: cv.pdf
-html: cv.html
+html: cv.html index.html
 
 %.pdf: %.tex
 	latexmk -pdf $*
@@ -22,6 +22,14 @@ html: cv.html
 
 %.html: %.xsl %.xml
 	xsltproc $^ > $@
+
+index.html: cv.html
+	echo "---" > $@
+	echo " layout: default" >> $@
+	echo " title: T.B. Hartman - CV" >> $@
+	echo "---" >> $@
+	cat $^ >> $@
+
 
 clean:
 	latexmk -c cv
