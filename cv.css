@@ -27,6 +27,19 @@ div#cv > div#education{
 .finish .tbd {
     font-style: italic;
 }
+div.job > div.title{
+    position: relative;
+    margin: 10px;
+    font-weight: bold;
+}
+span.date{
+    left:0px;
+    font-weight: normal;
+    
+}
+span.date_present{
+    font-style: italic;
+}
 div#Teaching h4{
     margin: 10px;
     font-weight: normal
@@ -39,7 +52,6 @@ li {
 div.item {
     position: relative;
 }
-
 .item div.date{
     position:absolute;
     top: 0px;

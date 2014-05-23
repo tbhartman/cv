@@ -102,8 +102,19 @@
     <span class="location"><xsl:value-of select="."/></span>
 </xsl:template>
 <xsl:template match="job/position">
-  <div class="job">
-      <h4><xsl:value-of select="title"/></h4>
+    <div class="job">
+        <div class="title">
+      <xsl:value-of select="title"/>
+      <span class="date">,
+          <xsl:value-of select="date[@type='start']"/>
+          <xsl:if test="date[@type='end']">
+           - <xsl:value-of select="date[@type='end']"/>
+          </xsl:if>
+          <xsl:if test="date[@type='present']">
+              - <span class="date_present">present</span>
+          </xsl:if>
+      </span>
+  </div>
       <xsl:if test="description">
     <div class="description">
        <xsl:value-of select="description"/>

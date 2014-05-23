@@ -23,7 +23,6 @@
           <xsl:apply-templates select="research"/>
           <xsl:apply-templates select="awards"/>
           <xsl:if test="activity">
-            <cmd name="clearpage" gr="0" nl2="1"/>
             <cmd name="section*" nl2="1">
               <parm>Activities</parm>
             </cmd>
@@ -225,7 +224,8 @@
     </cmd>
     <spec cat="nl"/>
     <xsl:for-each select="job">
-      <cmd name="subsection*"><parm><xsl:value-of select="company"/></parm></cmd>
+        <TeXML escape="1" ligatures="1">
+      <cmd name="subsection*"><parm><xsl:value-of select="company"/></parm></cmd></TeXML>
       <xsl:if test="department">
         <xsl:value-of select="department"/>
         <cmd name="hfill" gr="0"/>
@@ -235,7 +235,13 @@
       <env name="itemize">
         <xsl:for-each select="position">
           <cmd name="item" gr="0" nl1="1"/><spec cat="space"/>
-          <xsl:value-of select="title"/>
+          <xsl:value-of select="title"/>, <xsl:value-of select="date[@type='start']"/>
+          <xsl:if test="date[@type='end']">
+           -- <xsl:value-of select="date[@type='end']"/>
+          </xsl:if>
+          <xsl:if test="date[@type='present']">
+              -- <cmd name="emph"><parm>present</parm></cmd>
+          </xsl:if>
           <xsl:for-each select="description">
             <env name="itemize">
               <cmd name="item" gr="0" nl1="1"/><spec cat="space"/>

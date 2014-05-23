@@ -66,32 +66,52 @@
             <company>Virginia Polytechnic Institute and State University</company>
             <location>Blacksburg, VA</location>
             <position>
-                <title>Mechanics of Deformable Bodies, Spring 2012</title>
+                <title>Mechanics of Deformable Bodies</title>
+                <date type="start">Spring 2012</date>
             </position>
             <position>
-                <title>Mechanical Behavior of Materials Laboratory, Fall 2008</title>
+                <title>Mechanical Behavior of Materials Laboratory</title>
+                <date type="start">Fall 2008</date>
             </position>
         </job>
         <job>
             <company>The High School Affiliated with the People's University of China</company>
             <location>Beijing, China</location>
             <position>
-                <title>English Physics and Grammar, Fall 2007--Spring 2008</title>
+                <title>English Physics and Grammar</title>
+                <date type="start">Fall 2007</date>
+                <date type="end">Spring 2008</date>
             </position>
         </job>
     </employment>
     <employment type="Employment">
         <job>
+            <company>Dassault Systemes SIMULIA Corp.</company>
+            <location>Providence, RI</location>
+            <position>
+                <title>Technical Customer Support Manager</title>
+                <date type="start">May 2013</date>
+                <date type="present"/>
+                <description>
+                    Support customers in their use of SIMULIA's simulation software portforlio, primarily the Abaqus finite element anlaysis software suite, with an emphasis on modeling linear dynamics and acoustics analyses.
+                </description>
+            </position>
+        </job>
+        <job>
             <company>Virginia Polytechnic Institute and State University</company>
             <location>Blacksburg, VA</location>
             <position>
-                <title>Research Assistant, Scott W. Case, January 2010 -- present</title>
+                <title>Research Assistant, Scott W. Case</title>
+                <date type="start">January 2010</date>
+                <date type="end">May 2013</date>
                 <description>
                     Funded by Pratt &amp; Whitney, East Hartford, CT. Simulated quasi-static punch experiment of graphite fiber reinforced composite laminate using progressive failure finite element analysis.
                 </description>
             </position>
             <position>
-                <title>Research Assistant, Scott W. Case, January 2009 -- December 2009</title>
+                <title>Research Assistant, Scott W. Case</title>
+                <date type="start">January 2009</date>
+                <date type="end">December 2009</date>
                 <description>
                     Funded by Army Research Laboratories. Designed single-stage gas gun and performed experimental tests to characterize the behavior of flexible fibrous composite plates under intermediate-velocity rigid-body impact.
                 </description>
@@ -101,7 +121,9 @@
             <company>GSE Systems</company>
             <location>Windsor Mill, MD</location>
             <position>
-                <title>Systems Enginer, September2006 -- July 2007</title>
+                <title>Systems Enginer</title>
+                <date type="start">September 2006</date>
+                <date type="end">July 2007</date>
                 <description>
                     Modeled combined cycle gas turbine power plant mechanical systems through numerical simulation tools for use in educational training environments.
                 </description>
@@ -112,7 +134,8 @@
             <department>Aerospace/Communications Division</department>
             <location>Fort Wayne, IN</location>
             <position>
-                <title>Manufacturing Engineering Intern, Summer 2005</title>
+                <title>Manufacturing Engineering Intern</title>
+                <date type="start">Summer 2005</date>
                 <description>
                     Evaluated use of automated optical inspection equipment for in-line inspection of circuit card assembly production.
                 </description>
@@ -218,7 +241,7 @@
         <item>
             <task>Virginia Tech Graduate Honor System</task>
             <title>Panelist</title>
-            <date>2011--present</date>
+            <date>2011--2013</date>
         </item>
     </activity>
     <activity type="Conference Attendance">
