@@ -103,10 +103,12 @@
 </xsl:template>
 <xsl:template match="job/position">
   <div class="job">
-    <h4><xsl:value-of select="title"/></h4>
+      <h4><xsl:value-of select="title"/></h4>
+      <xsl:if test="description">
     <div class="description">
        <xsl:value-of select="description"/>
     </div>
+</xsl:if>
   </div>
 </xsl:template>
 <xsl:template match="awards">
