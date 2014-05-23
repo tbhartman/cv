@@ -137,6 +137,15 @@
             <pages>1156--1168</pages>
         </article>
         <proceedings>
+            <author self="1">T. Hartman</author>
+            <author>M. Hyer</author>
+            <author>S. Case</author>
+            <title>Geometrically Nonlinear Stress Recovery in Composite Laminates Subjected to Dynamic Loading</title>
+            <journal>55th AIAA Structures, Structural Dynamics, and Materials Conference</journal>
+            <location>National Harbor, MD</location>
+            <date>2014</date>
+        </proceedings>
+        <proceedings>
             <author>M. Tehrani</author>
             <author>A. Boroujeni</author>
             <author self="1">T. Hartman</author>
@@ -162,7 +171,7 @@
             <author>M. Hyer</author>
             <author>S. Case</author>
             <title>Geometrically Nonlinear Stress Recovery in Composite Laminates</title>
-            <journal>52nd AIAA Structures, Structural Dynamics, and Materials Converence</journal>
+            <journal>52nd AIAA Structures, Structural Dynamics, and Materials Conference</journal>
             <location>Denver, CO</location>
             <date>2011</date>
         </proceedings>
