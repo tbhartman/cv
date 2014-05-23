@@ -2,7 +2,7 @@
 
 all: pdf html
 
-.SECONDARY:  cv.texml
+.SECONDARY:  cv.texml cv.html
 .PHONY: pdf html 
 
 pdf: cv.pdf
@@ -27,9 +27,9 @@ index.html: cv.html
 	echo "---" > $@
 	echo " layout: default" >> $@
 	echo " title: T.B. Hartman - CV" >> $@
+	echo " css: ['/cv/cv.css']" >> $@
 	echo "---" >> $@
-	cat $^ >> $@
-
+	sed -n '/<body>/,/<\/body>/p' cv.html | sed -n '1!p' | sed -n '$$!p' >> $@
 
 clean:
 	latexmk -c cv
