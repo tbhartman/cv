@@ -5,7 +5,7 @@
   xmlns:str="http://exslt.org/strings"
   extension-element-prefixes="str">
 
-  <xsl:output method="xml" indent="yes"/>
+  <xsl:output method="xml" indent="yes" encoding="utf-8"/>
 
   <xsl:template match="vitae">
     <TeXML emptylines="1" ligatures="1">
@@ -224,8 +224,7 @@
     </cmd>
     <spec cat="nl"/>
     <xsl:for-each select="job">
-        <TeXML escape="1" ligatures="1">
-      <cmd name="subsection*"><parm><xsl:value-of select="company"/></parm></cmd></TeXML>
+      <cmd name="subsection*"><parm><xsl:value-of select="company"/></parm></cmd>
       <xsl:if test="department">
         <xsl:value-of select="department"/>
         <cmd name="hfill" gr="0"/>
@@ -490,7 +489,7 @@
       <TeXML escape="0" ligatures="1"><xsl:text>
 %
 
-
+\usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{titlesec}
 \usepackage{tabularx}
