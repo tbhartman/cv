@@ -7,6 +7,10 @@ div#contact{
     right: 0px;
     top: 0px;
     text-align: right;
+    margin-top: 0px !important;
+}
+div#address{
+    margin: 0px !important;
 }
 div#cv{
     margin: 0 auto 0 auto;

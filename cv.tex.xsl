@@ -56,9 +56,11 @@
       <env name="minipage">
         <opt>t</opt>
         <parm>0.5<cmd name="textwidth" gr="0"/></parm>
-        <xsl:value-of select="contact[@type='work']/department"/>
-        <spec cat="esc"/><spec cat="esc"/>
-        <spec cat="nl"/>
+        <xsl:if test="contact[@type='work']/department">
+            <xsl:value-of select="contact[@type='work']/department"/>
+            <spec cat="esc"/><spec cat="esc"/>
+            <spec cat="nl"/>
+        </xsl:if>
         <xsl:value-of select="contact[@type='work']/company"/>
         <spec cat="esc"/><spec cat="esc"/>
         <spec cat="nl"/>
@@ -69,6 +71,7 @@
         <spec cat="nl"/>
         <xsl:value-of select="contact[@type='work']/address/city"/>,
         <xsl:value-of select="contact[@type='work']/address/state"/>
+        <spec cat="space"/>
         <xsl:value-of select="contact[@type='work']/address/code"/>
       </env>
       <env name="minipage">
@@ -371,7 +374,7 @@
           <spec cat="space"/>
           (<xsl:value-of select="date"/>)
           <spec cat="space"/>
-          pp. <xsl:value-of select="pages"/>
+          pp. <xsl:value-of select="pages"/>.
         </xsl:for-each>
       </env>
     </xsl:if>
@@ -436,7 +439,7 @@
           <spec cat="space"/>
           <xsl:value-of select="location"/>,
           <spec cat="space"/>
-          <xsl:value-of select="date"/>
+          <xsl:value-of select="date"/>.
         </xsl:for-each>
       </env>
     </xsl:if>
@@ -456,7 +459,7 @@
             <cmd name="item" gr="0" nl1="1"/><spec cat="space"/>
             <xsl:value-of select="event"/>,<spec cat="space"/>
             <xsl:value-of select="location"/>,<spec cat="space"/>
-            <xsl:value-of select="date"/>,<spec cat="space"/>
+            <xsl:value-of select="date"/>.
           </env>
         </xsl:for-each>
       </env>

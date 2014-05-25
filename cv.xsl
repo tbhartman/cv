@@ -60,8 +60,8 @@
 
 <xsl:template match="//contact[@type='work']">
   <div id="address">
-    <xsl:value-of select="department"/><br />
-    <xsl:value-of select="company"/><br />
+    <xsl:apply-templates select="department"/>
+    <xsl:apply-templates select="company"/>
     <xsl:value-of select="address/number"/>
     <xsl:text>&#10;</xsl:text>
     <xsl:value-of select="address/street"/><br />
@@ -75,6 +75,9 @@
     <!--Work: <xsl:value-of select="phone[@type='work']"/><br />-->
     Email: <a href="mailto:{email}"><xsl:value-of select="email"/></a><br />
   </div>
+</xsl:template>
+<xsl:template match="department|company">
+    <xsl:value-of select="."/><br />
 </xsl:template>
 
 <xsl:template match="education">
@@ -122,16 +125,6 @@
 </xsl:if>
   </div>
 </xsl:template>
-<xsl:template match="awards">
-  <div id="awards">
-    <h2>Awards and Honors</h2>
-    <ul>
-      <xsl:for-each select="item">
-        <li><xsl:value-of select="."/></li>
-      </xsl:for-each>
-    </ul>
-  </div>
-</xsl:template>
 <xsl:template match="research">
   <div id="research">
     <h2>Research</h2>
@@ -153,6 +146,16 @@
         <xsl:apply-templates select="presentation"/>
       </div>
     </xsl:if>
+  </div>
+</xsl:template>
+<xsl:template match="awards">
+  <div id="awards">
+    <h2>Awards and Honors</h2>
+    <ul>
+      <xsl:for-each select="item">
+        <li><xsl:value-of select="."/></li>
+      </xsl:for-each>
+    </ul>
   </div>
 </xsl:template>
 <xsl:template match="author">
@@ -187,7 +190,8 @@
     <xsl:if test="volume">
       <xsl:value-of select="volume"/>.<xsl:value-of select="issue"/>
     </xsl:if>
-    <xsl:value-of select="date"/>
+    <xsl:value-of select="' '"/>
+    <xsl:value-of select="date"/>.
     <xsl:if test="pages">
       (pp. <xsl:value-of select="pages"/>)
     </xsl:if>

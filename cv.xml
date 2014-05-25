@@ -20,17 +20,18 @@
         <shortname>T.B. Hartman</shortname>
         <fullname>Timothy B. Hartman</fullname>
         <contact type="work">
-            <company>Virginia Polytechnic Institute and State University</company>
-            <department>Department of Engineering Science and Mechanics</department>
+            <company>Dassault Systèmes SIMULIA Corp.</company>
+            <!--<department></department>-->
             <address>
-                <number>223</number>
-                <street>Norris Hall (0219)</street>
-                <city>Blacksburg</city>
-                <state>VA</state>
-                <code>24061</code>
+                <number>166</number>
+                <street>Valley Street</street>
+                <city>Providence</city>
+                <state>RI</state>
+                <code>02909</code>
             </address>
             <phone type="mobile">260.627.9846</phone>
-            <email>tbhartman@vt.edu</email>
+            <phone type="office">401.276.7187</phone>
+            <email>timothy.hartman@3ds.com</email>
         </contact>
     </profile>
     <education>
@@ -142,11 +143,6 @@
             </position>
         </job>
     </employment>
-    <awards>
-        <item>Jefferson Goblet Award for Best Student Paper, 52nd AIAA SDM Conference, April, 2011</item>
-        <item>NCCAA Sportsmanship Award in Men's Tennis, 2006</item>
-        <item>NAIA Scholar-Athlete in Men's Tennis, 2005, 2006</item>
-    </awards>
     <research>
         <article>
             <author self="1">T. Hartman</author>
@@ -225,6 +221,11 @@
             <date>13 October 2010</date>
         </presentation>
     </research>
+    <awards>
+        <item>Jefferson Goblet Award for Best Student Paper, 52nd AIAA SDM Conference, April, 2011</item>
+        <item>NCCAA Sportsmanship Award in Men's Tennis, 2006</item>
+        <item>NAIA Scholar-Athlete in Men's Tennis, 2005, 2006</item>
+    </awards>
     <activity type="Advising">
         <item>
             <task>Undergraduate research with Matt Yaple</task>
