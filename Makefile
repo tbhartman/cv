@@ -32,5 +32,9 @@ index.html: cv.html
 	sed -n '/<body>/,/<\/body>/p' cv.html | sed -n '1!p' | sed -n '$$!p' >> $@
 
 clean:
-	latexmk -c cv
-
+	rm cv-blx.bib
+	rm cv.aux
+	rm cv.fdb_latexmk
+	rm cv.fls
+	rm cv.log
+	rm cv.out
