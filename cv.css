@@ -142,3 +142,7 @@ div.presentation span.event
 {
     margin-left: 10px;
 }
+div#version{
+    position: absolute;
+    visibility:collapse;
+}
