@@ -23,14 +23,14 @@
             <company>Dassault Systèmes SIMULIA Corp.</company>
             <!--<department></department>-->
             <address>
-                <number>166</number>
-                <street>Valley Street</street>
-                <city>Providence</city>
+                <number>1301</number>
+                <street>Atwood Avenue, Suite 101W</street>
+                <city>Johnston</city>
                 <state>RI</state>
-                <code>02909</code>
+                <code>02919</code>
             </address>
             <phone type="mobile">260.627.9846</phone>
-            <phone type="office">401.276.7187</phone>
+            <phone type="office">401.531.5265</phone>
             <email>timothy.hartman@3ds.com</email>
         </contact>
     </profile>
@@ -88,7 +88,7 @@
     <employment type="Employment">
         <job>
             <company>Dassault Systèmes SIMULIA Corp.</company>
-            <location>Providence, RI</location>
+            <location>Johnston, RI</location>
             <position>
                 <title>Technical Customer Support Manager</title>
                 <date type="start">May 2013</date>
@@ -144,6 +144,19 @@
         </job>
     </employment>
     <research>
+        <article>
+            <author self="1">T. Hartman</author>
+            <author>M. Hyer</author>
+            <author>S. Case</author>
+            <title>Stress Recovery in Composite Laminates
+                Including Geometrically Nonlinear
+                and Dynamic Effects</title>
+            <journal>AIAA Journal</journal>
+            <volume>54</volume>
+            <issue>8</issue>
+            <date>August 2016</date>
+            <pages>2521--2529</pages>
+        </article>
         <article>
             <author self="1">T. Hartman</author>
             <author>M. Hyer</author>

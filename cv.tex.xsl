@@ -521,18 +521,8 @@
 \newdateformat{tbhdate}{\twodigit{\THEDAY}\ \monthname[\THEMONTH] \THEYEAR}
 \tbhdate
 
-\usepackage[firstinits=true,
-            isbn=false,
-            citestyle=numeric-comp,
-            bibstyle=numeric,
-            sorting=none,
-            maxnames=10,
-            backend=bibtex]{biblatex}
-\addbibresource{cv.bib}
-
 % Fonts
 \usepackage[T1]{fontenc}
-\usepackage[urw-garamond]{mathdesign}
 
 \usepackage[plainpages=false]{hyperref}
 
